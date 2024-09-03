@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <section>
+        <img class="slider" src="https://imgd-ct.aeplcdn.com/1280x720/n/cw/ec/124839/thar-roxx-exterior-left-front-three-quarter.jpeg?isig=0&q=80" alt="car1">
+        <img class="slider" src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20140109025256_Coupe%20Black%20front.jpg&w=772&h=511&q=75&c=1" alt="car2">
+        <img class="slider" src="https://i.ytimg.com/vi/7Fq3AEbMCmA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDMr-534oEJWK27gkl9Kdb0Ze0a8Q" alt="car3">
+        <img class="slider"src="https://www.livemint.com/lm-img/img/2023/03/26/600x338/2-0-1412968002-Toyota-Fortuner2-0_1679755299241_1679801994107_1679801994107.jpg" alt="car4">
+        <img class="slider"src="https://st1.photogallery.ind.sh/wp-content/uploads/indiacom/inkas-armoured-vehicles-have-taken-the-suv-to-the-next-level-merc-launches-g63-amg-201808-1533646739-650x612.jpg" alt="car5">
+    </section>
+    <script>
+        var imageslider= 0;
+        carousel();
+
+        function carousel(){
+            var k;
+            var x =document.getElementsByClassName("slider");
+            for(k = 0; k < x.length; k++){
+                x[k].style.display= "none";
+            }
+            imageslider++;
+            if (imageslider > x.length) {imageslider=1}
+            x[imageslider-1].style.display= "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
